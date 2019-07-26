@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.dim{
+   
+}
+.login{
+    -fx-background-image: url(../images/user_profile_person_staff_student_circle_boss-512.png);
+        -fx-background-size:cover;
+}
+.serp2{
+     -fx-background-image: url(../images/Search_50px.png);
+        -fx-background-size:cover;
+}
+.logoutpane{
+    -fx-background-image: url(../images/Lock_50px.png);
+        -fx-background-size:cover;
+}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="686.0" prefWidth="1069.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TelOrderController">
+   <stylesheets>
+      <URL value="@/stylesheets/telorder.css" />
+   </stylesheets>
+   <children>
+      <Pane prefHeight="70.0" prefWidth="1069.0" style="-fx-background-color: linear-gradient(to bottom, #ff5858 0%, #f09819 100%);">
+         <children>
+            <Pane layoutX="4.0" layoutY="5.0" prefHeight="61.0" prefWidth="65.0" styleClass="login" stylesheets="@../Stylesheets/telorder.css" />
+            <Label fx:id="lbldate" layoutX="83.0" layoutY="40.0" prefHeight="25.0" prefWidth="136.0" textFill="#f8f3f3" />
+            <Label layoutX="643.0" layoutY="18.0" text=" Bill No          :" textFill="#fcfafa">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="642.0" layoutY="45.0" text="Bill Amount    :" textFill="#fcf7f7">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbloid" layoutX="764.0" layoutY="17.0" prefHeight="17.0" prefWidth="81.0" textFill="#361010" />
+            <Label fx:id="lblamount" layoutX="764.0" layoutY="46.0" prefHeight="17.0" prefWidth="81.0" textFill="#fcfafa" />
+            <Pane layoutX="985.0" layoutY="5.0" prefHeight="53.0" prefWidth="50.0" styleClass="logoutpane" stylesheets="@../Stylesheets/telorder.css" />
+            <Pane layoutX="870.0" layoutY="5.0" prefHeight="61.0" prefWidth="58.0" />
+            <Label fx:id="lbltime" layoutX="248.0" layoutY="40.0" prefHeight="25.0" prefWidth="58.0" textFill="#fff9f9" />
+            <Label layoutX="82.0" layoutY="3.0" prefHeight="44.0" prefWidth="210.0" text="Telephone Operator  :" textFill="#fcfafa">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbltelopid" layoutX="299.0" layoutY="3.0" prefHeight="44.0" prefWidth="173.0" text="Nihal fernando" textFill="#fcfafa">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="3.0" layoutY="652.0" prefHeight="34.0" prefWidth="1064.0" style="-fx-background-color: linear-gradient(to top, #f5f7fa 0%, #c3cfe2 100%);;">
+         <children>
+            <Label layoutX="416.0" prefHeight="34.0" prefWidth="255.0" text="Developed by Dimesha Wijerathna @IJSE" textFill="#6f5568" />
+         </children>
+      </Pane>
+      <Pane layoutY="144.0" prefHeight="471.0" prefWidth="678.0">
+         <children>
+            <ScrollPane layoutY="51.0" prefHeight="418.0" prefWidth="678.0">
+               <content>
+                  <Pane prefHeight="447.0" prefWidth="726.0">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="21.0" prefHeight="189.0" prefWidth="220.0" style="-fx-border-color: gray; -fx-border-width: 2px;" styleClass="im1" stylesheets="@../Stylesheets/telorder.css">
+                           <children>
+                              <TextField fx:id="txtsub1n" focusTraversable="false" layoutY="131.0" onAction="#Actiontxtsub1n" prefHeight="61.0" prefWidth="219.0" style="-fx-background-color: #f5f4; -fx-border-color: white; -fx-text-fill: black; -fx-font-weight: bolder; -fx-border-radius: 2%;" text="Deviled Chicken           RS:345.00">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="258.0" layoutY="21.0" prefHeight="190.0" prefWidth="220.0" style="-fx-border-color: gray; -fx-border-width: 2px;" styleClass="im2" stylesheets="@../Stylesheets/telorder.css">
+                           <children>
+                              <TextField fx:id="txtsub2n" focusTraversable="false" layoutY="131.0" onAction="#Actiontxtsub2n" prefHeight="61.0" prefWidth="219.0" style="-fx-background-color: #f5f4; -fx-border-color: white; -fx-text-fill: black; -fx-font-weight: bolder; -fx-border-radius: 2%;" text="Vege with Chips           RS:310.00">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="502.0" layoutY="21.0" prefHeight="189.0" prefWidth="215.0" style="-fx-border-color: gray; -fx-border-width: 2px;" styleClass="im3" stylesheets="@../Stylesheets/telorder.css">
+                           <children>
+                              <TextField fx:id="txttelusername2" focusTraversable="false" layoutY="131.0" onAction="#Actiontxttelusername" prefHeight="61.0" prefWidth="219.0" style="-fx-background-color: #f5f4; -fx-border-color: white; -fx-text-fill: black; -fx-font-weight: bolder; -fx-border-radius: 2%;" text="Prons with chips           RS:350.00">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="13.0" layoutY="244.0" prefHeight="189.0" prefWidth="222.0" style="-fx-border-color: gray; -fx-border-width: 2px;" styleClass="im4" stylesheets="@../Stylesheets/telorder.css">
+                           <children>
+                              <TextField fx:id="txttelusername3" focusTraversable="false" layoutX="-2.0" layoutY="128.0" onAction="#Actiontxttelusername" prefHeight="61.0" prefWidth="226.0" style="-fx-background-color: #f5f4; -fx-border-color: white; -fx-text-fill: black; -fx-font-weight: bolder; -fx-border-radius: 2%;" text="Mashroom with chips     RS:335.00">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="266.0" layoutY="244.0" prefHeight="189.0" prefWidth="215.0" style="-fx-border-color: gray; -fx-border-width: 2px;" styleClass="im5" stylesheets="@../Stylesheets/telorder.css">
+                           <children>
+                              <TextField fx:id="txttelusername4" focusTraversable="false" layoutX="-2.0" layoutY="128.0" onAction="#Actiontxttelusername" prefHeight="61.0" prefWidth="219.0" style="-fx-background-color: #f5f4; -fx-border-color: white; -fx-text-fill: black; -fx-font-weight: bolder; -fx-border-radius: 2%;" text="Cheese Onion           RS:345.00">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="510.0" layoutY="244.0" prefHeight="189.0" prefWidth="215.0" style="-fx-border-color: gray; -fx-border-width: 2px;" styleClass="im6" stylesheets="@../Stylesheets/telorder.css">
+                           <children>
+                              <TextField fx:id="txttelusername5" focusTraversable="false" layoutX="-2.0" layoutY="128.0" onAction="#Actiontxttelusername" prefHeight="61.0" prefWidth="219.0" style="-fx-background-color: #f5f4; -fx-border-color: white; -fx-text-fill: black; -fx-font-weight: bolder; -fx-border-radius: 2%;" text="BBQ Chicken           RS:375.00">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="21.0" layoutY="6.0" prefHeight="34.0" prefWidth="145.0" text="Total Products    :" textFill="#514747">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="6.0" prefHeight="34.0" prefWidth="69.0" text="15" textFill="#514747">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="684.0" layoutY="82.0" prefHeight="533.0" prefWidth="380.0">
+         <children>
+            <Pane prefHeight="53.0" prefWidth="380.0" style="-fx-background-color: linear-gradient(to left, #0fd850 0%, #f9f047 100%);; -fx-border-radius: 10%;">
+               <children>
+                  <Label layoutX="80.0" layoutY="5.0" prefHeight="44.0" prefWidth="255.0" text="New Order Details" textFill="#f8f3f3">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="61.0" prefHeight="249.0" prefWidth="380.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="21.0" layoutY="22.0" text="Customer Name   :" />
+                  <Label layoutX="21.0" layoutY="68.0" prefHeight="17.0" prefWidth="106.0" text="Telphone No        :" />
+                  <Label layoutX="21.0" layoutY="108.0" text="Address                :" />
+                  <JFXTextField fx:id="txtcustname" layoutX="131.0" layoutY="18.0" onAction="#Actiontxtcustname" prefHeight="25.0" prefWidth="184.0" />
+                  <JFXTextField fx:id="txtcusttel" layoutX="131.0" layoutY="64.0" onAction="#Actiontxtcusttel" prefHeight="25.0" prefWidth="184.0" />
+                  <JFXTextField fx:id="txtaddress" layoutX="131.0" layoutY="104.0" onAction="#Actiontxtaddress" prefHeight="25.0" prefWidth="184.0" />
+                  <Label layoutX="21.0" layoutY="147.0" prefHeight="17.0" prefWidth="106.0" text="Item name            :" />
+                  <Label layoutX="21.0" layoutY="176.0" prefHeight="17.0" prefWidth="106.0" text="Order qty              :" />
+                  <Label layoutX="25.0" layoutY="214.0" prefHeight="17.0" prefWidth="99.0" text="Price                    :" />
+                  <JFXTextField fx:id="txtordqty" layoutX="131.0" layoutY="181.0" onAction="#Actiontxtordqty" prefHeight="25.0" prefWidth="184.0" />
+                  <JFXTextField fx:id="txtprice" layoutX="131.0" layoutY="210.0" onAction="#Actiontxtprice" prefHeight="25.0" prefWidth="184.0" />
+                  <JFXComboBox fx:id="jcmbitemname" layoutX="131.0" layoutY="143.0" onAction="#Actionjcmbitemname" prefHeight="25.0" prefWidth="184.0" />
+               </children>
+            </Pane>
+            <Pane layoutY="310.0" prefHeight="228.0" prefWidth="380.0">
+               <children>
+                  <TableView fx:id="tblorder" prefHeight="222.0" prefWidth="380.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="OrderId" />
+                        <TableColumn prefWidth="75.0" text="Order Date" />
+                        <TableColumn prefWidth="75.0" text="Item Name" />
+                        <TableColumn prefWidth="75.0" text="Qty" />
+                        <TableColumn editable="false" prefWidth="75.0" text="Price" />
+                     </columns>
+                     <effect>
+                        <DisplacementMap>
+                           <mapData>
+                              <FloatMap />
+                           </mapData>
+                        </DisplacementMap>
+                     </effect>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="-3.0" layoutY="69.0" prefHeight="70.0" prefWidth="626.0">
+         <children>
+            <TextField fx:id="itemserch" focusTraversable="false" layoutX="257.0" layoutY="22.0" onAction="#Actionitemserch" prefHeight="34.0" prefWidth="343.0" promptText="Code/Name" />
+            <Pane layoutX="563.0" layoutY="22.0" prefHeight="34.0" prefWidth="37.0" styleClass="serp1" stylesheets="@../Stylesheets/telorder.css" />
+            <JFXButton fx:id="btnchangeord" layoutX="42.0" layoutY="26.0" onAction="#Actionbtnchangeord" prefHeight="33.0" prefWidth="197.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);" text="Change  Order">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnsend" layoutX="776.0" layoutY="619.0" onAction="#Actionbtnsend" prefHeight="33.0" prefWidth="197.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);" text="Send  to Kitchen">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

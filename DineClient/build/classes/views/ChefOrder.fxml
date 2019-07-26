@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="686.0" prefWidth="1069.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChefOrderController">
+   <stylesheets>
+      <URL value="@/stylesheets/chforder.css" />
+   </stylesheets>
+   <children>
+      <Pane prefHeight="70.0" prefWidth="1069.0" style="-fx-background-color: linear-gradient(to bottom, #ff5858 0%, #f09819 100%);">
+         <children>
+            <Pane layoutX="4.0" layoutY="5.0" prefHeight="61.0" prefWidth="65.0" styleClass="login" stylesheets="@../Stylesheets/cheforder.css" />
+            <Label fx:id="lbldate" layoutX="83.0" layoutY="40.0" prefHeight="25.0" prefWidth="43.0" text="Date" textFill="#f8f3f3" />
+            <Label layoutX="624.0" layoutY="18.0" text="Last Bill No    :" textFill="#fcfafa">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="624.0" layoutY="41.0" text="Bill Amount    :" textFill="#fcf7f7">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="Lbllastordid" layoutX="745.0" layoutY="17.0" onMouseClicked="#ActionLbllastordid" prefHeight="17.0" prefWidth="81.0" text="12" />
+            <Label layoutX="745.0" layoutY="40.0" prefHeight="17.0" prefWidth="81.0" text="123" />
+            <Pane layoutX="985.0" layoutY="5.0" prefHeight="53.0" prefWidth="50.0" styleClass="logoutpane" stylesheets="@../Stylesheets/cheforder.css" />
+            <Pane layoutX="870.0" layoutY="5.0" prefHeight="61.0" prefWidth="58.0" />
+            <Label fx:id="lbltime" layoutX="134.0" layoutY="42.0" prefHeight="25.0" prefWidth="58.0" text="Time" textFill="#fff9f9" />
+            <Label layoutX="82.0" layoutY="3.0" prefHeight="44.0" prefWidth="99.0" text="CHEF    :" textFill="#fcfafa">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblchefname" layoutX="163.0" layoutY="3.0" prefHeight="44.0" prefWidth="173.0" text="Kaml fernando" textFill="#fcfafa">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="3.0" layoutY="652.0" prefHeight="34.0" prefWidth="1064.0" style="-fx-background-color: linear-gradient(to top, #f5f7fa 0%, #c3cfe2 100%);;">
+         <children>
+            <Label layoutX="416.0" prefHeight="34.0" prefWidth="255.0" text="Developed by Dimesha Wijerathna @IJSE" textFill="#6f5568" />
+         </children>
+      </Pane>
+      <Pane layoutY="144.0" prefHeight="282.0" prefWidth="678.0">
+         <children>
+            <Label layoutX="14.0" layoutY="235.0" prefHeight="34.0" prefWidth="164.0" text="All submited Order    :" textFill="#514747">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="235.0" prefHeight="34.0" prefWidth="69.0" text="34" textFill="#514747">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblsubmit" layoutY="282.0" prefHeight="222.0" prefWidth="678.0">
+               <columns>
+                  <TableColumn prefWidth="143.0" text="Order ID" />
+                  <TableColumn minWidth="0.0" prefWidth="166.0" text="Cust Tel No" />
+                  <TableColumn prefWidth="76.0" text="Order Qty" />
+                  <TableColumn prefWidth="154.0" text="Item Name" />
+                  <TableColumn editable="false" prefWidth="138.0" text="Price" />
+               </columns>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+            </TableView>
+            <JFXButton fx:id="btnord1" layoutX="58.0" layoutY="25.0" onAction="#Actionbtnord1" prefHeight="34.0" prefWidth="544.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to left, #74ebd5 0%, #9face6 100%);" text="Order  1" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnord2" layoutX="58.0" layoutY="74.0" onAction="#Actionbtnord2" prefHeight="34.0" prefWidth="544.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to left, #74ebd5 0%, #9face6 100%);" text="Order  2" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnord3" layoutX="58.0" layoutY="126.0" onAction="#Actionbtnord3" prefHeight="34.0" prefWidth="544.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to left, #74ebd5 0%, #9face6 100%);" text="Order  3" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnord4" layoutX="58.0" layoutY="180.0" onAction="#Actionbtnord4" prefHeight="34.0" prefWidth="544.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to left, #74ebd5 0%, #9face6 100%);" text="Order  4" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="684.0" layoutY="82.0" prefHeight="533.0" prefWidth="380.0">
+         <children>
+            <Pane prefHeight="53.0" prefWidth="380.0" style="-fx-background-color: linear-gradient(to left, #0fd850 0%, #f9f047 100%);; -fx-border-radius: 10%;">
+               <children>
+                  <Label layoutX="80.0" layoutY="5.0" prefHeight="44.0" prefWidth="255.0" text="Take Order Details" textFill="#f8f3f3">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="61.0" prefHeight="474.0" prefWidth="380.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="21.0" layoutY="22.0" text="Order ID   :" />
+                  <Label layoutX="21.0" layoutY="83.0" text="Order Date  :" />
+                  <Label layoutX="21.0" layoutY="143.0" text="Item  Name   :" />
+                  <JFXTextField fx:id="txtordid" layoutX="21.0" layoutY="49.0" onAction="#Actiontxtordid" prefHeight="25.0" prefWidth="294.0" />
+                  <JFXTextField fx:id="txtorddate" layoutX="21.0" layoutY="112.0" onAction="#Actiontxtorddate" prefHeight="25.0" prefWidth="294.0" />
+                  <JFXTextField fx:id="txtitemname" layoutX="21.0" layoutY="176.0" onAction="#Actiontxtitemname" prefHeight="25.0" prefWidth="305.0" />
+                  <Label layoutX="21.0" layoutY="210.0" text="Customer  TelNo   :" />
+                  <JFXTextField fx:id="txttelopid" layoutX="21.0" layoutY="301.0" onAction="#Actiontxttelopid" prefHeight="25.0" prefWidth="305.0" />
+                  <Label layoutX="19.0" layoutY="273.0" text="TelOperator Id   :" />
+                  <JFXTextField fx:id="txtcusttel" layoutX="21.0" layoutY="241.0" onAction="#Actiontxtcusttel" prefHeight="25.0" prefWidth="305.0" />
+                  <Label layoutX="19.0" layoutY="335.0" text="Process Time   :" />
+                  <Label layoutX="19.0" layoutY="392.0" text="Order Qty   :" />
+                  <JFXTextField fx:id="ordqty" layoutX="21.0" layoutY="420.0" onAction="#Actionordqty" prefHeight="25.0" prefWidth="305.0" />
+                  <JFXTimePicker fx:id="timepi" layoutX="16.0" layoutY="355.0" onAction="#Actiontimepi" prefHeight="28.0" prefWidth="322.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="-3.0" layoutY="69.0" prefHeight="70.0" prefWidth="626.0">
+         <children>
+            <TextField fx:id="txtordersearch" focusTraversable="false" layoutX="257.0" layoutY="22.0" onAction="#Actiontxtordersearch" prefHeight="34.0" prefWidth="343.0" promptText="Code/Name" />
+            <Pane layoutX="563.0" layoutY="22.0" prefHeight="34.0" prefWidth="37.0" styleClass="serp2" stylesheets="@../Stylesheets/cheforder.css" />
+            <JFXButton fx:id="btncancelorder" layoutX="42.0" layoutY="26.0" onAction="#Actionbtncancelorder" prefHeight="33.0" prefWidth="197.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);" text="Cancel  Order">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btndelever" layoutX="776.0" layoutY="619.0" onAction="#Actionbtndelever" prefHeight="33.0" prefWidth="197.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);" text="Delever  Order">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
